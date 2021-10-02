@@ -1,4 +1,4 @@
-﻿# Author: Cerlat Pavel FAF-192
+# Author: Cerlat Pavel FAF-192
 
 
 #  Prerequisites:
@@ -35,4 +35,5 @@ It is creational design pattern which operate with creating the complex objects 
 Abstract Factory Pattern says that just define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes.That means Abstract Factory lets a class returns a factory of classes.
 
 
+# The rest will be added at a later date, sorry UwU <3.
 
