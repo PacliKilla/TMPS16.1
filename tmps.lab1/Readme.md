@@ -35,5 +35,67 @@ It is creational design pattern which operate with creating the complex objects 
 Abstract Factory Pattern says that just define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes.That means Abstract Factory lets a class returns a factory of classes.
 
 
-# The rest will be added at a later date, sorry UwU <3.
+## Singleton helps me create the instance of redguard and nords which means that they are created only once, when requested, and I can access it from anywhere in my program whenever I need
 
+class Redguard implements PlayableRace {
+    private static Redguard redguard = null;
+    public static Redguard getInstance() throws IOException {
+        if (redguard == null) {
+            synchronized (Dovahkiin.class) {
+                if (redguard == null) {
+                    redguard = new Redguard();
+                }
+            }
+        }
+        return redguard;
+    }
+    
+ class Nord implements PlayableRace {
+    private static Nord nord = null;
+
+    public static Nord getInstance(){
+        if (nord == null) {
+            synchronized (Dovahkiin.class) {
+                if (nord == null) {
+                    nord = new Nord();
+                }
+            }
+        }
+        return nord;
+        
+        
+Prototype pattern I used for my Atronach class. I have created the Atronach class which has a method that gives it a name and every time I want to add a new Atronach, I just clone the original Atronach and I give him a new name.
+
+public class Atronach {
+    private static String name;
+
+    public Atronach(String name) {
+        Atronach.name = name;
+    }
+
+
+    public Atronach clone(String name){
+        Atronach newAtronach = null;
+            newAtronach = new Atronach(name);
+        return newAtronach;
+    }
+}
+
+Factory Method and Abstract Factory for example if I want to create a redguard race, I call type race and I am getting the singleton instances of redguards that I have previously created and add them to the corresponding redguard class.
+
+import java.io.IOException;
+public final class Races {
+
+    public static PlayableRace add_race(String race) throws IOException {
+        switch (race){
+            case "redguard": return Redguard.getInstance();
+            case "nord": return Nord.getInstance();
+            default: return null;
+        }
+    }
+    
+class Assassin implements Classes {
+    public Assassin() {
+        System.out.println("Assassin created");
+    }
+}
