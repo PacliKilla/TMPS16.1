@@ -23,16 +23,12 @@
    - Prototype
 
 ##  Implementation of task:
-
-Before starting performing this laboratory work I have studied about design patterns and what is the purpose of usign them into some projects, what are advantages. Also, I have studied each design pattern and I have tried to understand how it works.
+In general this code just creates an Elder Scrolls V Skyrim character which can be a Redguard or a Nord, he has one of the 4 classes which depends on his race and an atronach
+which can be of 2 types Flame and Storm.Before starting performing this laboratory work I have studied about design patterns and what is the purpose of usign them into some projects, what are advantages. Also, I have studied each design pattern and I have tried to understand how it works.
 
 ## Builder pattern
 
 It is creational design pattern which operate with creating the complex objects and we need to use when the process involved in creating an object is extremely complex, with lots of mandatory and optional parameters.
-
-## Abstract Factory
-
-Abstract Factory Pattern says that just define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes.That means Abstract Factory lets a class returns a factory of classes.
 
 
 ## Singleton helps me create the instance of redguard and nords which means that they are created only once, when requested, and I can access it from anywhere in my program whenever I need
@@ -80,7 +76,9 @@ public class Atronach {
         return newAtronach;
     }
 }
+## Abstract Factory
 
+Abstract Factory Pattern says that just define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes.That means Abstract Factory lets a class returns a factory of classes.
 Factory Method and Abstract Factory for example if I want to create a redguard race, I call type race and I am getting the singleton instances of redguards that I have previously created and add them to the corresponding redguard class.
 
 import java.io.IOException;
