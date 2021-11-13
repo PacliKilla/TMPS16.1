@@ -173,6 +173,5 @@ public class InnDetails{
         this.accNumber = accNumber;
     }
 }
-//
-The result:
+#The Result:
 ![](Screens/Adapt.png)
