@@ -33,7 +33,7 @@
  - you need to use several subclasses for an object , but it's not good, because you should have an interface for each object from subclass.
  - ensure the good communication between interfaces and objects. 
  In my case I used this pattern to create an inn, you give it an amount of septims and it cheks if they are enough for the inn.
- 
+ ```
 package domain.RiverwoodInn_adapter;
 public interface Interface {
     public void giveInnDetails();
@@ -64,7 +64,7 @@ public class InnDetails{
     public void settCustomerAmount(long accNumber) {
         this.accNumber = accNumber;
     }
-
+```
 #The Result:
 ![](Screens/Adapt.png)
 
@@ -73,7 +73,7 @@ public class InnDetails{
 A Decorator Pattern says that just "attach a flexible additional responsibilities to an object dynamically".
 In other words, The Decorator Pattern uses composition instead of inheritance to extend the functionality of an object at runtime.
 In my case I used decorator pattern to create an alcehmist who sells potions.
-
+```
 package domain.Potions_decorator;
 
 public interface Potions {
@@ -106,12 +106,14 @@ public abstract class Alchemy implements Potions{
         return newPotion.potionPrice();
     }
 }
+```
 #The result:
 ![](Screens/Decorator.png)
 
 ### Facade
 A Facade Pattern says that just "just provide a unified and simplified interface to a set of interfaces in a subsystem, therefore it hides the complexities of the subsystem from the client".In other words, Facade Pattern describes a higher-level interface that makes the sub-system easier to use. 
 In my case I used it to create a weapon shop.
+```
 package domain.Weapons_facade;
 
 public interface WeaponShop {
@@ -143,6 +145,7 @@ public class Merchant {
         Archery.price();
     }
 }
+```
 #The Result:
 ![](Screens/Facade.png) 
 
