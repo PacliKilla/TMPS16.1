@@ -172,6 +172,6 @@ public class InnDetails{
     public void settCustomerAmount(long accNumber) {
         this.accNumber = accNumber;
     }
-}
+
 #The Result:
 ![](Screens/Adapt.png)
