@@ -102,3 +102,77 @@ class Assassin implements Classes {
         System.out.println("Assassin created");
     }
 }
+
+## TMPS Laboratory Work Nr.2
+
+
+### Prerequisites:
+  - Design patterns
+  - Structural design patterns
+  - Organize and structure the application using structural design patterns.
+
+### Objectives:
+  - Study structural design patterns
+  - Develop a project using 5 structural design patterns
+  - Ensure connection between patterns
+ 
+ ### Tasks: 
+ -  Create an application using 3 design structural patterns : 
+    - Adapter
+    - Bridge
+    - Composite
+    - Flyweight
+    - Decorator 
+    - Facade
+    - Proxy
+    
+ ### Implementation of task: 
+ 
+ In this laboratory work I have continued to work on the first laboratory and study about Design Patterns, but this time about **Structural**. The structural design patterns are concerned with how classes and objects arecomposed to form larger structures.Structural class patterns use inheritance to compose interfacesor implementations. In this case imagine how to combine the multiple inheritance mixes many classes into one. A result is a class that combines the properties of its parent classes. 
+ 
+ So let's analyze the Strucutural patterns implementation according to my application. 
+ 
+  ### Adapter
+ 
+ The adapter pattern provides an interface , which perform a uniform abstractization of different interfaces. The classes that working with Adapter pattern should work together because this have the same interface. All of the design pattern come to solve an problem , structural , creatioal or behavioral. So, the adapter we should use then : 
+ - you need to use several subclasses for an object , but it's not good, because you should have an interface for each object from subclass.
+ - ensure the good communication between interfaces and objects. 
+ In my case I used this pattern to create an inn, you give it an amount of septims and it cheks if they are enough for the inn.
+ 
+ //
+package domain.RiverwoodInn_adapter;
+
+public interface Interface {
+    public void giveInnDetails();
+    public String getSeptimAmount();
+}
+//
+package domain.RiverwoodInn_adapter;
+
+public class InnDetails{
+    private String innName;
+    private String customerName;
+    private long accNumber;
+
+    public String getInnName() {
+        return innName;
+    }
+    public void setInnName(String innName) {
+        this.innName = innName;
+    }
+    public String getCustomerName() {
+        return customerName;
+    }
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+    public long getCustomerAmount() {
+        return accNumber;
+    }
+    public void settCustomerAmount(long accNumber) {
+        this.accNumber = accNumber;
+    }
+}
+//
+The result:
+![](Screens/Adapt.png)
