@@ -34,14 +34,11 @@
  - ensure the good communication between interfaces and objects. 
  In my case I used this pattern to create an inn, you give it an amount of septims and it cheks if they are enough for the inn.
  
- //
 package domain.RiverwoodInn_adapter;
-
 public interface Interface {
     public void giveInnDetails();
     public String getSeptimAmount();
 }
-//
 package domain.RiverwoodInn_adapter;
 
 public class InnDetails{
